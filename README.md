@@ -13,3 +13,9 @@ python run_experiment.py
 ```
 
 Directory ‘ReAD/OOD_detection_task2/' corresponds to the OOD Detection of type II, it's execution is completely similar to tpye I. In this task, the model structure setting is relatively simple and the test accuracy of model is not very good, but in order to compare with work Outside-the-Box[paper_link], we completely adopted the model structure setting in their article.
+
+The data of experiment is available at:
+
+link：https://pan.baidu.com/s/1gXZy6ID-9Kb-YaSArjwvnw 
+password：zzsj 
+
