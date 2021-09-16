@@ -20,5 +20,5 @@ For the OOD detection tasks of type II, we reused the model structure settings i
 for the sake of comparison.
 
 The data used in the above experiments are available at:
-link：https://pan.baidu.com/s/1gXZy6ID-9Kb-YaSArjwvnw 
-password：zzsj 
+https://pan.baidu.com/s/1gXZy6ID-9Kb-YaSArjwvnw 
+(password：zzsj)
