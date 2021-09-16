@@ -16,6 +16,7 @@ python run_experiment.py
 ```
 For the OOD detection tasks of type II, we reused the model structure settings in the paper 
 >Henzinger, T.A., Lukina, A., Schilling, C.: Outside the Box: Abstraction-Based Monitoring of Neural Networks. 24th European Conference on Artificial Intelligence (ECAI) 2020
+
 for the sake of comparison.
 
 The data used in the above experiments are available at:
