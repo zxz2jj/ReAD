@@ -26,17 +26,22 @@ def load_mnist_of_given_category(category):
 
 
 def load_ood_data(category_of_train):
-    _, _, _, x_test, _, _ = load_mnist_of_given_category(category_of_train)
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    x_test = x_test.astype('float32') / 255.
+    x_test = np.expand_dims(x_test, axis=3)
+    y_test_category = y_test.reshape(-1)
 
-    number_of_test = x_test.shape[0]
+    x_test_of_ood = x_test[y_test_category >= category_of_train]
+
+    number_of_test = x_test_of_ood.shape[0]
     model = tf.keras.models.load_model(gv.model_path)
-    prediction = model.predict_classes(x_test)
+    prediction = model.predict_classes(x_test_of_ood)
     ood_dict = {}
     for c in range(gv.category_classified_of_model):
-        data_category = x_test[prediction == c]
+        ood_data_category = x_test_of_ood[prediction == c]
         prediction_category = prediction[prediction == c]
         ood_dict_category = {'correct_pictures': None, 'correct_prediction': None,
-                             'wrong_pictures': data_category, 'wrong_prediction': prediction_category}
+                             'wrong_pictures': ood_data_category, 'wrong_prediction': prediction_category}
         ood_dict[c] = ood_dict_category
 
     return ood_dict, number_of_test
