@@ -1,4 +1,4 @@
-# Welecome to use ReAD!
+# Welcome to use ReAD!
 
 ReAD is an Out-of-Distribution (OOD) detection method through Relative Activation-Deactivation Abstractions.
 
